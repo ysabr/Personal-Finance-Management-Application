@@ -53,6 +53,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
+]
+
+
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
@@ -77,12 +82,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'finance_db',
+        'USER': 'postgres',
+        'PASSWORD': 'ysabr',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation

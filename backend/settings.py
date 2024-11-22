@@ -53,9 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
-]
+
 
 
 ROOT_URLCONF = 'backend.urls'
@@ -85,16 +83,19 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'finance_db',
-        'USER': 'postgres',
-        'PASSWORD': 'ysabr',
-        'HOST': 'db',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db',
+        'USER': 'ysabr',
+        'PASSWORD': 'ysabr1234',
+        'HOST': 'localhost',  # Change 'db' to 'localhost'
+        'PORT': '5432',  # Default port for PostgreSQL
     }
 }
 
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

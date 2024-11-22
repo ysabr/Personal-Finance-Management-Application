@@ -83,14 +83,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db',
-        'USER': 'ysabr',
-        'PASSWORD': 'ysabr1234',
-        'HOST': 'localhost',  # Change 'db' to 'localhost'
-        'PORT': '5432',  # Default port for PostgreSQL
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'finance_db',
+        'USER': 'postgres',
+        'PASSWORD': 'yourpassword',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
+
 
 
 CORS_ALLOWED_ORIGINS = [

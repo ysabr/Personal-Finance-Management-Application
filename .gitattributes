@@ -1,4 +1,2 @@
 * text=auto
 venv/* -text
-python.py
-text.txt
